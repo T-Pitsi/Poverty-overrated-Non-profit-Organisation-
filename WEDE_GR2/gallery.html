@@ -1,0 +1,314 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Poverty Overrated NPO | Community Gallery</title>
+
+<meta name="description"
+content="View Poverty Overrated's community outreach, education support programmes, volunteer initiatives, and empowerment projects.">
+
+<meta name="keywords"
+content="Poverty Overrated, Gallery, Community Projects, Volunteers, Education Support, NPO South Africa">
+
+<link rel="stylesheet" href="mystyles.css">
+
+</head>
+
+<body>
+
+<!-- Header -->
+
+<header>
+
+<img
+src="images/untitled design.png"
+class="logo"
+width="300"
+alt="Poverty Overrated Logo">
+
+<h1>Poverty Overrated</h1>
+
+<h2>A Non-Profit Organisation</h2>
+
+<h3>Innovating Black Minds</h3>
+
+</header>
+
+<hr>
+
+<!-- Navigation -->
+
+<nav>
+
+<ul>
+
+<li><a href="products.html">HOME</a></li>
+<li><a href="gallery.html">GALLERY</a></li>
+<li><a href="enquires.html">ENQUIRIES</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+<li><a href="about.html">ABOUT</a></li>
+
+</ul>
+
+</nav>
+
+<hr>
+
+<!-- Intro -->
+
+<section>
+
+<h2>Our Community Work Gallery</h2>
+
+<p>
+
+Explore our community outreach,
+education support programmes,
+volunteer initiatives, and
+community development projects.
+
+</p>
+
+</section>
+
+<!-- Gallery -->
+
+<section>
+
+<div class="gallery">
+
+<div class="photo">
+
+<img
+class="gallery-img"
+src="images/communitywork.png"
+alt="Community Clean Up Project">
+
+<p>
+Community clean-up initiative.
+</p>
+
+</div>
+
+<div class="photo">
+
+<img
+class="gallery-img"
+src="images/volunteer.webp"
+alt="Volunteer Programme">
+
+<p>
+Education support programme.
+</p>
+
+</div>
+
+<div class="photo">
+
+<img
+class="gallery-img"
+src="images/graduates.jpg"
+alt="Graduation Success Programme">
+
+<p>
+Volunteer outreach programme.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Lightbox -->
+
+<div id="lightbox" class="lightbox">
+
+<span class="close">
+&times;
+</span>
+
+<img
+id="lightbox-img"
+src=""
+alt="Expanded Image">
+
+</div>
+
+<!-- Community Impact -->
+
+<section>
+
+<h2>Community Impact</h2>
+
+<table>
+
+<tr>
+
+<th>Programme</th>
+<th>Impact</th>
+
+</tr>
+
+<tr>
+
+<td>Education Support</td>
+<td>Improved learning opportunities</td>
+
+</tr>
+
+<tr>
+
+<td>Volunteer Outreach</td>
+<td>Community empowerment</td>
+
+</tr>
+
+<tr>
+
+<td>Skills Development</td>
+<td>Employment readiness</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<!-- Donation -->
+
+<section>
+
+<h2>Support Our Mission</h2>
+
+<p>
+
+Your contribution helps us continue
+creating opportunities and supporting
+communities throughout South Africa.
+
+</p>
+
+<a href="donate.html">
+
+<button class="donate-btn">
+
+Donate Now
+
+</button>
+
+</a>
+
+</section>
+
+<!-- Testimonials -->
+
+<section>
+
+<h2>Success Stories</h2>
+
+<blockquote>
+
+"Thanks to Poverty Overrated,
+I gained practical skills that
+helped me secure employment."
+
+</blockquote>
+
+<br>
+
+<blockquote>
+
+"The volunteer programme helped
+me make a meaningful difference
+in my community."
+
+</blockquote>
+
+</section>
+
+<hr>
+
+<!-- Footer -->
+
+<footer>
+
+<p>
+
+&copy; 2026 Poverty Overrated NPO |
+Innovating Black Minds
+
+</p>
+
+</footer>
+
+<!-- Lightbox Script -->
+
+<script>
+
+const images =
+document.querySelectorAll(
+".gallery-img"
+);
+
+const lightbox =
+document.getElementById(
+"lightbox"
+);
+
+const lightboxImg =
+document.getElementById(
+"lightbox-img"
+);
+
+images.forEach(image=>{
+
+image.addEventListener(
+"click",
+()=>{
+
+lightbox.style.display =
+"block";
+
+lightboxImg.src =
+image.src;
+
+});
+
+});
+
+document
+.querySelector(".close")
+.addEventListener(
+"click",
+()=>{
+
+lightbox.style.display =
+"none";
+
+});
+
+lightbox.addEventListener(
+"click",
+function(e){
+
+if(e.target===lightbox){
+
+lightbox.style.display =
+"none";
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>
+```

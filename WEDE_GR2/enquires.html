@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Poverty Overrated NPO | Enquiries</title>
+
+<meta name="description"
+content="Submit enquiries about volunteering, sponsorships, partnerships, community projects and clothing purchases.">
+
+<meta name="keywords"
+content="Poverty Overrated, Enquiries, Sponsorship, Volunteer, Partnership, Community Development">
+
+<meta name="author"
+content="Poverty Overrated NPO">
+
+<link rel="stylesheet" href="mystyles.css">
+
+</head>
+
+<body>
+
+<header>
+
+<img
+src="images/untitled design.png"
+class="logo"
+width="250"
+alt="Poverty Overrated Logo">
+
+<h1>Poverty Overrated</h1>
+<h2>A Non-Profit Organisation</h2>
+<h3>Innovating Black Minds</h3>
+
+</header>
+
+<hr>
+
+<nav>
+
+<ul>
+
+<li><a href="products.html">HOME</a></li>
+<li><a href="gallery.html">GALLERY</a></li>
+<li><a href="enquires.html">ENQUIRIES</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+<li><a href="about.html">ABOUT</a></li>
+
+</ul>
+
+</nav>
+
+<hr>
+
+<section>
+
+<h2>Send Us An Enquiry</h2>
+
+<p>
+Please complete the form below and a member
+of our team will respond as soon as possible.
+</p>
+
+</section>
+
+<section>
+
+<form id="enquiryForm">
+
+<h3>Personal Information</h3>
+
+<label for="fullname">Full Name</label>
+<br>
+
+<input
+type="text"
+id="fullname"
+required
+minlength="3">
+
+<br><br>
+
+<label for="email">Email Address</label>
+<br>
+
+<input
+type="email"
+id="email"
+required>
+
+<br><br>
+
+<label for="phone">Phone Number</label>
+<br>
+
+<input
+type="tel"
+id="phone"
+pattern="[0-9]{10}"
+placeholder="0123456789"
+required>
+
+<br><br>
+
+<h3>Type of Enquiry</h3>
+
+<select id="enquiryType" required>
+
+<option value="">
+Select Enquiry Type
+</option>
+
+<option value="product">
+Product Purchase
+</option>
+
+<option value="volunteer">
+Volunteer
+</option>
+
+<option value="sponsor">
+Sponsor
+</option>
+
+<option value="partnership">
+Partnership
+</option>
+
+<option value="support">
+Support
+</option>
+
+</select>
+
+<br><br>
+
+<div id="amountSection" style="display:none;">
+
+<label for="amount">
+Sponsorship Amount (R)
+</label>
+
+<br>
+
+<input
+type="number"
+id="amount"
+min="100"
+value="500">
+
+</div>
+
+<br>
+
+<h3>Areas of Interest</h3>
+
+<div class="options-group">
+
+<label>
+<input type="checkbox" value="education">
+Education
+</label>
+
+<label>
+<input type="checkbox" value="skills">
+Skills Development
+</label>
+
+<label>
+<input type="checkbox" value="community">
+Community Projects
+</label>
+
+</div>
+
+<br>
+
+<h3>Your Message</h3>
+
+<textarea
+id="message"
+rows="5"
+required
+minlength="20"
+maxlength="500"></textarea>
+
+<p>
+Characters:
+<span id="charCount">0</span>/500
+</p>
+
+<br>
+
+<input
+type="submit"
+value="Submit Enquiry">
+
+<input
+type="reset"
+value="Clear Form">
+
+</form>
+
+</section>
+
+<section>
+
+<div id="responseBox">
+
+<p>
+Submit the form to receive feedback.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Frequently Asked Questions</h2>
+
+<button class="accordion">
+Can I volunteer?
+</button>
+
+<div class="panel">
+
+<p>
+Yes. Volunteer opportunities are
+available throughout the year.
+</p>
+
+</div>
+
+<button class="accordion">
+How are donations used?
+</button>
+
+<div class="panel">
+
+<p>
+Donations support education,
+skills development and community
+empowerment programmes.
+</p>
+
+</div>
+
+<button class="accordion">
+Do you offer partnerships?
+</button>
+
+<div class="panel">
+
+<p>
+Yes. We welcome partnerships with
+organisations and community leaders.
+</p>
+
+</div>
+
+</section>
+
+<hr>
+
+<footer>
+
+<p>
+
+&copy;
+<span id="year"></span>
+
+Poverty Overrated NPO |
+Enquiries Page
+
+</p>
+
+</footer>
+
+<script>
+
+/* Current Year */
+
+document.getElementById("year")
+.textContent =
+new Date().getFullYear();
+
+/* Character Counter */
+
+document
+.getElementById("message")
+.addEventListener("input", function(){
+
+document
+.getElementById("charCount")
+.textContent =
+this.value.length;
+
+});
+
+/* Show Sponsor Amount */
+
+document
+.getElementById("enquiryType")
+.addEventListener("change", function(){
+
+const amountSection =
+document.getElementById("amountSection");
+
+if(this.value === "sponsor"){
+
+amountSection.style.display = "block";
+
+}else{
+
+amountSection.style.display = "none";
+
+}
+
+});
+
+/* Form Submission */
+
+document
+.getElementById("enquiryForm")
+.addEventListener("submit", function(event){
+
+event.preventDefault();
+
+const name =
+document.getElementById("fullname").value;
+
+const enquiry =
+document.getElementById("enquiryType").value;
+
+const amount =
+document.getElementById("amount").value;
+
+const message =
+document.getElementById("message").value;
+
+if(message.trim().length < 20){
+
+alert(
+"Message must contain at least 20 characters."
+);
+
+return;
+
+}
+
+localStorage.setItem(
+"lastEnquiry",
+enquiry
+);
+
+let response = "";
+
+switch(enquiry){
+
+case "product":
+
+response =
+"Thank you " +
+name +
+". Your product enquiry has been received.";
+
+break;
+
+case "volunteer":
+
+response =
+"Thank you " +
+name +
+". We will contact you regarding volunteer opportunities.";
+
+break;
+
+case "sponsor":
+
+response =
+"Thank you " +
+name +
+". Your sponsorship pledge of R" +
+amount +
+" has been received.";
+
+break;
+
+case "partnership":
+
+response =
+"Thank you " +
+name +
+". We have received your partnership enquiry.";
+
+break;
+
+case "support":
+
+response =
+"Thank you " +
+name +
+". A support representative will contact you shortly.";
+
+break;
+
+default:
+
+response =
+"Please select an enquiry type.";
+
+}
+
+document
+.getElementById("responseBox")
+.innerHTML =
+
+"<h3>Enquiry Submitted Successfully</h3><p>" +
+response +
+"</p>";
+
+});
+
+/* Accordion */
+
+document
+.querySelectorAll(".accordion")
+.forEach(button => {
+
+button.addEventListener("click", () => {
+
+const panel =
+button.nextElementSibling;
+
+panel.style.display =
+panel.style.display === "block"
+? "none"
+: "block";
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Poverty Overrated NPO | Donate</title>
+
+<meta name="description"
+content="Support Poverty Overrated's education, skills development, and community empowerment programmes through your donation.">
+
+<meta name="keywords"
+content="Donate, Poverty Overrated, NPO, Community Development, Education Support, South Africa">
+
+<link rel="stylesheet" href="mystyles.css">
+
+</head>
+
+<body>
+
+<!-- Header -->
+
+<header>
+
+<img
+src="images/untitled design.png"
+class="logo"
+width="250"
+alt="Poverty Overrated Logo">
+
+<h1>Help Empower Youth Minds</h1>
+
+<h2>Donation Form</h2>
+
+<p>
+Thank you for supporting our mission.
+Your donation helps create educational
+opportunities and community development
+programmes.
+</p>
+
+</header>
+
+<hr>
+
+<!-- Navigation -->
+
+<nav>
+
+<ul>
+
+<li><a href="products.html">HOME</a></li>
+<li><a href="gallery.html">GALLERY</a></li>
+<li><a href="enquires.html">ENQUIRIES</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+<li><a href="about.html">ABOUT</a></li>
+
+</ul>
+
+</nav>
+
+<hr>
+
+<!-- Donation Form -->
+
+<section>
+
+<form id="donationForm">
+
+<h2>Make a Donation</h2>
+
+<label for="fullname">
+Full Name
+</label>
+
+<br>
+
+<input
+type="text"
+id="fullname"
+required
+minlength="3">
+
+<br><br>
+
+<label for="email">
+Email Address
+</label>
+
+<br>
+
+<input
+type="email"
+id="email"
+required>
+
+<br><br>
+
+<label for="phone">
+Contact Number
+</label>
+
+<br>
+
+<input
+type="tel"
+id="phone"
+pattern="[0-9]{10}"
+placeholder="0123456789"
+required>
+
+<br><br>
+
+<label for="amount">
+Donation Amount (R)
+</label>
+
+<br>
+
+<input
+type="number"
+id="amount"
+min="50"
+value="100"
+required>
+
+<br><br>
+
+<label for="message">
+Message
+</label>
+
+<br>
+
+<textarea
+id="message"
+rows="5"
+maxlength="500"
+placeholder="Optional message">
+</textarea>
+
+<br><br>
+
+<button
+type="button"
+class="donate-btn"
+onclick="calculateImpact()">
+
+Calculate Impact
+
+</button>
+
+<br><br>
+
+<input
+type="submit"
+value="Donate Now">
+
+<input
+type="reset"
+value="Clear Form">
+
+</form>
+
+</section>
+
+<!-- Donation Impact -->
+
+<section>
+
+<div id="impactBox">
+
+<p>
+Enter an amount and click
+"Calculate Impact".
+</p>
+
+</div>
+
+</section>
+
+<!-- Why Donate -->
+
+<section>
+
+<h2>Why Donate?</h2>
+
+<table>
+
+<tr>
+<th>Donation</th>
+<th>Possible Impact</th>
+</tr>
+
+<tr>
+<td>R100</td>
+<td>Learning materials support</td>
+</tr>
+
+<tr>
+<td>R500</td>
+<td>Skills development workshops</td>
+</tr>
+
+<tr>
+<td>R1000+</td>
+<td>Community empowerment projects</td>
+</tr>
+
+</table>
+
+</section>
+
+<hr>
+
+<footer>
+
+<p>
+&copy; 2026 Poverty Overrated NPO |
+Innovating Black Minds
+</p>
+
+</footer>
+
+<!-- JavaScript -->
+
+<script>
+
+function calculateImpact(){
+
+let amount =
+Number(
+document.getElementById("amount").value
+);
+
+let message = "";
+
+if(amount < 500){
+
+message =
+"Your donation can assist with educational materials and youth support programmes.";
+
+}
+else if(amount < 1000){
+
+message =
+"Your donation can help fund skills development workshops.";
+
+}
+else{
+
+message =
+"Your donation can contribute significantly to community empowerment projects.";
+
+}
+
+document
+.getElementById("impactBox")
+.innerHTML =
+
+`
+<h3>Donation Impact</h3>
+
+<p>
+Donation Amount:
+<strong>R${amount}</strong>
+</p>
+
+<p>${message}</p>
+`;
+
+}
+
+document
+.getElementById("donationForm")
+.addEventListener(
+"submit",
+function(event){
+
+event.preventDefault();
+
+let name =
+document.getElementById("fullname").value;
+
+document
+.getElementById("impactBox")
+.innerHTML +=
+
+`
+<br>
+
+<h3>
+Thank You, ${name}!
+</h3>
+
+<p>
+Your donation enquiry has been recorded.
+Our team will contact you shortly.
+</p>
+`;
+
+});
+
+</script>
+
+</body>
+
+</html>
+```

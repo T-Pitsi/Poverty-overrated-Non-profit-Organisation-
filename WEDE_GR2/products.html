@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Poverty Overrated NPO | Products</title>
+
+<meta name="description"
+      content="Shop the official Poverty Overrated clothing collection. Every purchase supports education, skills development and community upliftment programmes.">
+
+<meta name="keywords"
+      content="Poverty Overrated, Hoodies, T-Shirts, Clothing Brand, NPO, South Africa">
+
+<meta name="author"
+      content="Poverty Overrated NPO">
+
+<meta property="og:title"
+      content="Poverty Overrated Clothing Collection">
+
+<meta property="og:description"
+      content="Support education and community upliftment through every purchase.">
+
+<meta property="og:image"
+      content="images/untitled-design.png">
+
+<link rel="stylesheet" href="mystyles.css">
+
+</head>
+
+<body>
+
+<header>
+
+<img src="images/untitled design.png"
+     class="logo"
+     width="250"
+     alt="Poverty Overrated Logo">
+
+<h1>Poverty Overrated</h1>
+<h2>A Non-Profit Organisation</h2>
+<h3>Innovating Black Minds</h3>
+
+</header>
+
+<hr>
+
+<nav>
+
+<ul>
+
+<li><a href="products.html">HOME</a></li>
+<li><a href="gallery.html">GALLERY</a></li>
+<li><a href="enquiries.html">ENQUIRIES</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+<li><a href="about.html">ABOUT</a></li>
+
+</ul>
+
+</nav>
+
+<hr>
+
+<section>
+
+<h2>Welcome to Poverty Overrated</h2>
+
+<p>
+
+Every purchase supports education,
+skills development and community
+upliftment programmes across
+South Africa.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>Our Mission</h2>
+
+<table>
+
+<tr>
+<th>Category</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>Mission</td>
+<td>
+Empowering communities through
+education and sustainable initiatives.
+</td>
+</tr>
+
+<tr>
+<td>Vision</td>
+<td>
+A society where people are recognised
+for their potential rather than poverty.
+</td>
+</tr>
+
+<tr>
+<td>Values</td>
+<td>
+Empowerment, Equality, Innovation
+and Community Development.
+</td>
+</tr>
+
+</table>
+
+</section>
+
+<section class="search-section">
+
+<h2>Find Products</h2>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search products...">
+
+<select id="sortProducts">
+
+<option value="">
+Sort Products
+</option>
+
+<option value="low">
+Price Low → High
+</option>
+
+<option value="high">
+Price High → Low
+</option>
+
+</select>
+
+</section>
+
+<section>
+
+<h2>Our Clothing Collection</h2>
+
+<div class="products-gallery">
+
+<div
+class="product-card"
+data-name="Women's Hoodie"
+data-price="550">
+
+<img
+src="images/povertyoverrated girls.png"
+alt="Women's Hoodie">
+
+<h3>Women's Hoodie</h3>
+
+<p>
+Premium oversized hoodie.
+</p>
+
+<h4>Price: R550.00</h4>
+
+<button
+class="buy-btn"
+onclick="buyItem(`Women's Hoodie`,550)">
+
+Buy Now
+
+</button>
+</div>
+
+<div
+class="product-card"
+data-name="Men's Hoodie"
+data-price="550">
+
+<img
+src="images/povertyoverrated boys.png"
+alt="Men's Hoodie">
+
+<h3>Men's Hoodie</h3>
+
+<p>
+Stylish streetwear hoodie.
+</p>
+
+<h4>Price: R550.00</h4>
+
+<button
+class="buy-btn"
+onclick="buyItem(`Men's Hoodie`,550)">
+Buy Now
+</button>
+
+</div>
+
+<div
+class="product-card"
+data-name="Graphic T-Shirt"
+data-price="350">
+
+<img
+src="images/povertyoverrated shirts.png"
+alt="Graphic T-Shirt">
+
+<h3>Graphic T-Shirt</h3>
+
+<p>
+Modern graphic t-shirt.
+</p>
+
+<h4>Price: R350.00</h4>
+
+<button
+class="buy-btn"
+onclick="buyItem('Graphic T-Shirt',350)">
+Buy Now
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<button
+id="loadProducts"
+class="buy-btn">
+
+Load More Products
+
+</button>
+
+</section>
+
+<section id="purchaseSection">
+
+<h2>Purchase Details</h2>
+
+<div id="purchaseInfo">
+
+<p>
+Select a product above.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Frequently Asked Questions</h2>
+
+<button class="accordion">
+How does my purchase help?
+</button>
+
+<div class="panel">
+
+<p>
+Every purchase funds educational
+and community programmes.
+</p>
+
+</div>
+
+<button class="accordion">
+Do you deliver nationwide?
+</button>
+
+<div class="panel">
+
+<p>
+Yes, throughout South Africa.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Contact Us</h2>
+
+<form id="contactForm">
+
+<label for="name">
+Full Name
+</label>
+
+<br>
+
+<input
+type="text"
+id="name"
+required>
+
+<br><br>
+
+<label for="email">
+Email Address
+</label>
+
+<br>
+
+<input
+type="email"
+id="email"
+required>
+
+<br><br>
+
+<label for="message">
+Message
+</label>
+
+<br>
+
+<textarea
+id="message"
+required
+minlength="20">
+</textarea>
+
+<br><br>
+
+<input
+type="submit"
+value="Send Message">
+
+</form>
+
+</section>
+
+<div id="productModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close">
+&times;
+</span>
+
+<div id="modalBody"></div>
+
+</div>
+
+</div>
+
+<hr>
+
+<footer>
+
+<p>
+
+&copy;
+<span id="year"></span>
+
+Poverty Overrated NPO |
+Innovating Black Minds
+
+</p>
+
+</footer>
+
+<script>
+
+document.getElementById("year")
+.textContent =
+new Date().getFullYear();
+
+function buyItem(product,price){
+
+localStorage.setItem(
+"selectedProduct",
+product
+);
+
+localStorage.setItem(
+"selectedPrice",
+price
+);
+
+document.getElementById(
+"purchaseInfo"
+).innerHTML =
+
+`
+<h3>${product}</h3>
+
+<p>
+Price:
+<strong>R${price}.00</strong>
+</p>
+
+<label>Quantity:</label>
+
+<input
+type="number"
+id="qty"
+value="1"
+min="1"
+max="10">
+
+<br><br>
+
+<button
+class="buy-btn"
+onclick="calculateTotal(${price})">
+
+Calculate Total
+
+</button>
+
+<div id="totalPrice"></div>
+`;
+
+document.getElementById(
+"modalBody"
+).innerHTML =
+
+`
+<h2>${product}</h2>
+
+<p>
+Price: R${price}
+</p>
+`;
+
+document.getElementById(
+"productModal"
+).style.display =
+"block";
+
+}
+
+function calculateTotal(price){
+
+const qty =
+document.getElementById(
+"qty"
+).value;
+
+const total =
+qty * price;
+
+document.getElementById(
+"totalPrice"
+).innerHTML =
+
+`<h4>Total Cost: R${total}.00</h4>`;
+
+}
+
+document.querySelector(".close")
+.addEventListener("click",()=>{
+
+document.getElementById(
+"productModal"
+).style.display =
+"none";
+
+});
+
+document.getElementById(
+"searchInput"
+).addEventListener(
+"keyup",
+function(){
+
+let filter =
+this.value.toLowerCase();
+
+document
+.querySelectorAll(
+".product-card"
+)
+.forEach(card=>{
+
+card.style.display =
+card.innerText
+.toLowerCase()
+.includes(filter)
+? "block"
+: "none";
+
+});
+
+});
+
+document.getElementById(
+"sortProducts"
+).addEventListener(
+"change",
+function(){
+
+const gallery =
+document.querySelector(
+".products-gallery"
+);
+
+const cards =
+[...document.querySelectorAll(
+".product-card"
+)];
+
+cards.sort((a,b)=>{
+
+const aPrice =
+Number(a.dataset.price);
+
+const bPrice =
+Number(b.dataset.price);
+
+return this.value === "low"
+? aPrice - bPrice
+: bPrice - aPrice;
+
+});
+
+cards.forEach(card=>
+gallery.appendChild(card));
+
+});
+
+let loaded = false;
+
+document.getElementById(
+"loadProducts"
+).addEventListener(
+"click",
+()=>{
+
+if(loaded) return;
+
+loaded = true;
+
+document.querySelector(
+".products-gallery"
+).innerHTML +=
+
+`
+<div
+class="product-card"
+data-price="200">
+
+<img
+src="images/cap.jpg"
+alt="Branded Cap">
+
+<h3>Branded Cap</h3>
+
+<p>
+Official branded cap.
+</p>
+
+<h4>Price: R200.00</h4>
+
+<button
+class="buy-btn"
+onclick="buyItem('Branded Cap',200)">
+
+Buy Now
+
+</button>
+
+</div>
+`;
+
+});
+
+document
+.querySelectorAll(".accordion")
+.forEach(button=>{
+
+button.addEventListener(
+"click",
+()=>{
+
+const panel =
+button.nextElementSibling;
+
+panel.style.display =
+panel.style.display === "block"
+? "none"
+: "block";
+
+});
+
+});
+
+document
+.getElementById("contactForm")
+.addEventListener(
+"submit",
+function(event){
+
+const message =
+document.getElementById(
+"message"
+).value;
+
+if(message.trim().length < 20){
+
+event.preventDefault();
+
+alert(
+"Message must contain at least 20 characters."
+);
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
+
